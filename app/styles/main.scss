@@ -20,6 +20,7 @@ body {
     transition: box-shadow 0.5s;
     padding: 0px 100px 50px 100px;
     z-index: 0;
+    height: calc(100vh - 100px);
 }
 
 .container:hover {
@@ -81,6 +82,10 @@ label {
     height: 1px;
 }
 
+.searchInput:focus {
+    border-bottom: 2px solid #009688;
+}
+
 .innerContainer {
     margin: 0px auto;
     margin-top: 80px;
@@ -90,20 +95,35 @@ label {
     flex-wrap: wrap;
 }
 
-.everySingleItem {
-    height: 100px;
-    width: 100px;
-    margin: 7px;
-    border-radius: 100%;
-    border: 1px solid green;
-    transition: box-shadow 0.4s, margin 0.2s;
+.quote  {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.searchInput:focus {
-    border-bottom: 2px solid #009688;
+.quoteQuote {
+    width: 60%;
+    margin: 70px auto;
+    font-style: italic;
+    color: #889;
 }
 
-.everySingleItem:hover {
-    box-shadow: 2px 2px 5px 1px green;
-    margin-top: -2px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

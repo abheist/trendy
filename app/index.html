@@ -24,17 +24,37 @@
     <div class="container">
         <h2 class="trendyHeading">Trendy</h2>
         <div class="searchBox">
+        <form action="http://www.google.com">
             <input type="text" id="searchInput" class="searchInput searchBack">
             <label class="searchLabel" for="searchInput">Google Search</label>
+        </form>
         </div>
         <div class="innerContainer">
-            <div class="everySingle item-{{ single.id }}" ng-repeat="single in details">
+            <div class="everySingle" title="{{single.iconName}}" ng-repeat="single in details">
                 <a href="{{single.mainUrl}}">
-                    <div class="everySingleItem" style="background: url({{single.iconUrl}});background-size: 70px 70px;background-position:center;background-repeat: no-repeat;"></div>
+                    <div class="item-{{ single.id }}" style="background: url({{single.iconUrl}});background-size: 70px 70px;background-position:center;background-repeat: no-repeat;"></div>
                 </a>
-                
+                <style>
+                    .item-{{single.id}} {
+                        height: 100px;
+                        width: 100px;
+                        margin: 7px;
+                        border-radius: 100%;
+                        border: 1px solid {{single.iconBorderColor}};
+                        transition: box-shadow 0.4s, margin 0.2s;
+                    }
+                    .item-{{single.id}}:hover   {
+                        margin-top: -2px;
+                        box-shadow: 2px 2px 5px 1px {{single.iconBorderColor}};
+                    }
+                </style>
             </div>
         </div>
+        <div class="quote">
+        <p class="quoteQuote">
+            Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.
+        </p>
+    </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
