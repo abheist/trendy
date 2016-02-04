@@ -1,4 +1,4 @@
-var app = angular.module('trendy', []);
+var app = angular.module('trendy', ['ui.sortable']);
 app.controller('MainCtrl', ['$http', '$scope', function($http, $scope) {
     $http.get('data/data.json').success(function(data) {
         $scope.details = data;
