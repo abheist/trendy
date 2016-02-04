@@ -15,6 +15,7 @@
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
@@ -26,9 +27,9 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="aboutButton">
-        <canvas id="graph-canvas" width="50" height="50"></canvas>
-        <div id="example-photo" class="photo">
+    <div class="aboutButton" ng-controller="AppCtrl" id="popupContainer" ng-cloak>
+        <canvas id="graph-canvas" width="50" height="100"></canvas>
+        <div id="example-photo" class="photo" ng-click="showAlert($event)">
             <span class="aboutClass">About</span>
         </div>
     </div>
@@ -36,7 +37,7 @@
         <h2 class="trendyHeading">Trendy</h2>
         <div class="searchBox">
             <form action="https://www.google.co.in/search?q">
-                <input type="text" id="searchInput" class="searchInput searchBack" name="q" onfocus="this.value=' '" autofocus>
+                <input type="text" id="searchInput" class="searchInput searchBack" name="q" onfocus="this.value=' '" autofocus autocomplete="off">
                 <label class="searchLabel" for="searchInput">Google Search</label>
             </form>
         </div>
@@ -57,6 +58,12 @@
                     .item-{{single.id}}:hover   {
                         margin-top: -2px;
                         box-shadow: 2px 2px 5px 1px {{single.iconBorderColor}};
+                    }
+                    @media all and (max-width: 500px)   {
+                        .item-{{single.id}} {
+                            height: 50px;
+                            width: 50px;
+                        }
                     }
                 </style>
             </div>
@@ -91,6 +98,10 @@
     <script src="/bower_components/angular-resource/angular-resource.js"></script>
     <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="/bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->

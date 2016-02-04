@@ -6,21 +6,20 @@
     padding: 0px;
 }
 
-body {
-    background: #F1F1F1 url(/images/back.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+
+body    {
+    background: #e1e1e1;
     font-family: calibri;
 }
 
 .container {
-    margin: 20px;
+    margin: 0px 20px 20px 20px;
     background: rgba(255, 255, 255, 0.7);
     width: calc(100% - 240px);
     transition: box-shadow 0.5s;
     padding: 0px 100px 50px 100px;
     z-index: 0;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 70px);
 }
 
 .container:hover {
@@ -86,10 +85,7 @@ label {
     border-bottom: 2px solid #009688;
 }
 
-.searchInput:not(:focus)    {
-
-}
-
+.searchInput:not(:focus) {}
 
 .innerContainer {
     margin: 0px auto;
@@ -100,47 +96,38 @@ label {
     flex-wrap: wrap;
 }
 
-.quote  {
+.quote {
     text-align: center;
     margin-top: 50px;
 }
 
 .quoteQuote {
     width: 60%;
-    margin: 70px auto;
+    margin: 0px auto;
     font-style: italic;
     color: #889;
 }
 
-
-
-
-
 #graph-canvas {
-  width: 300px;
-  height: 300px;
-  box-shadow: 0px 1px 2px #888;
-  left: 310px;
-  position: relative;
-  display: none;
+    box-shadow: 0px 1px 2px #888;
+    left: 310px;
+    position: relative;
+    display: none;
 }
 
 .photo {
-  -webkit-transform: scale3d(1,1,1);
-  width: 50px;
-  height: 100px;
-  display: block;
-  box-shadow: 0px 1px 2px #999;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: red;
-  position: fixed;
-  left: calc(100% - 100px);
-  margin-top: 20px;
+    -webkit-transform: scale3d(1, 1, 1);
+    width: 50px;
+    height: 100px;
+    display: block;
+    box-shadow: 0px 1px 2px #999;
+    position: absolute;
+    background: red;
+    left: calc(100% - 100px);
+    outline: none;
 }
 
-.aboutButton    {
+.aboutButton {
     cursor: pointer;
 }
 
@@ -150,34 +137,28 @@ label {
     line-height: 100px;
 }
 
-
 .pill {
-  border-radius: 32px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -56px;
-  margin-top: -12px;
-  width: 100px;
-  color: #fff;
-  text-align: center;
-  padding: 6px;
-  font-size: 12px;
-  cursor: default;
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -ms-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  opacity: 1;
+    border-radius: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -56px;
+    margin-top: -12px;
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    font-size: 12px;
+    cursor: default;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    opacity: 1;
 }
 
-.photo.down .pill{
-  opacity: 0;
+.photo.down .pill {
+    opacity: 0;
 }
-
-
-
-
-
