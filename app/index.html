@@ -27,7 +27,7 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="mainContainerBox">
+    <div class="mainContainerBox" style="background: url({{details.iconLinks['backgroundLinks'][0].backUrl}}); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
         <div class="aboutButton" ng-controller="AppCtrl" id="popupContainer" ng-cloak>
             <canvas id="graph-canvas" width="50" height="100"></canvas>
@@ -43,7 +43,7 @@
                 </form>
             </div>
             <div class="innerContainer" ui-sortable ng-model="details">
-                <div class="everySingle" title="{{single.iconName}}" ng-repeat="single in details">
+                <div class="everySingle" title="{{single.iconName}}" ng-repeat="single in details.iconLinks['iconLinks1']">
                     <a href="{{single.mainUrl}}">
                         <div class="item-{{ single.id }}" style="background: url({{single.iconUrl}});background-size: 70px 70px;background-position:center;background-repeat: no-repeat;"></div>
                     </a>

@@ -1,3 +1,5 @@
+
+
 var app = angular.module('trendy', ['ui.sortable', 'ngMaterial']);
 app.controller('MainCtrl', ['$http', '$scope', function($http, $scope) {
     $http.get('data/data.json').success(function(data) {
