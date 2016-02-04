@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "iconUrl": "images/1.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 2,
+    "iconUrl": "images/2.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 3,
+    "iconUrl": "images/3.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 4,
+    "iconUrl": "images/4.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 5,
+    "iconUrl": "images/5.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 6,
+    "iconUrl": "images/6.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 7,
+    "iconUrl": "images/7.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 8,
+    "iconUrl": "images/8.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 9,
+    "iconUrl": "images/9.png",
+    "iconName": "Medium",
+    "iconBorderColor": "red",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 10,
+    "iconUrl": "images/10.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 11,
+    "iconUrl": "images/11.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  },
+  {
+    "id": 12,
+    "iconUrl": "images/12.png",
+    "iconName": "Medium",
+    "iconBorderColor": "Green",
+    "iconShadowColor": "Blue",
+    "mainUrl": "Google.com"
+  }
+]
