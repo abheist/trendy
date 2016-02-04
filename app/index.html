@@ -27,86 +27,88 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="aboutButton" ng-controller="AppCtrl" id="popupContainer" ng-cloak>
-        <canvas id="graph-canvas" width="50" height="100"></canvas>
-        <div id="example-photo" class="photo" ng-click="showAlert($event)">
-            <span class="aboutClass">About</span>
-        </div>
-    </div>
-    <div class="container">
-        <h2 class="trendyHeading">Trendy</h2>
-        <div class="searchBox">
-            <form action="https://www.google.co.in/search?q">
-                <input type="text" id="searchInput" class="searchInput searchBack" name="q" onfocus="this.value=' '" autofocus autocomplete="off">
-                <label class="searchLabel" for="searchInput">Google Search</label>
-            </form>
-        </div>
-        <div class="innerContainer" ui-sortable ng-model="details">
-            <div class="everySingle" title="{{single.iconName}}" ng-repeat="single in details">
-                <a href="{{single.mainUrl}}">
-                    <div class="item-{{ single.id }}" style="background: url({{single.iconUrl}});background-size: 70px 70px;background-position:center;background-repeat: no-repeat;"></div>
-                </a>
-                <style>
-                    .item-{{single.id}} {
-                        height: 100px;
-                        width: 100px;
-                        margin: 7px;
-                        border-radius: 100%;
-                        border: 1px solid {{single.iconBorderColor}};
-                        transition: box-shadow 0.4s, margin 0.2s;
-                    }
-                    .item-{{single.id}}:hover   {
-                        margin-top: -2px;
-                        box-shadow: 2px 2px 5px 1px {{single.iconBorderColor}};
-                    }
-                    @media all and (max-width: 500px)   {
-                        .item-{{single.id}} {
-                            height: 50px;
-                            width: 50px;
-                        }
-                    }
-                </style>
+    <div class="mainContainerBox">
+        <div class="container">
+        <div class="aboutButton" ng-controller="AppCtrl" id="popupContainer" ng-cloak>
+            <canvas id="graph-canvas" width="50" height="100"></canvas>
+            <div id="example-photo" class="photo" ng-click="showAlert($event)">
+                <span class="aboutClass">About</span>
             </div>
         </div>
-        <div class="quote">
-            <p class="quoteQuote">
-                Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.
-            </p>
+            <h2 class="trendyHeading">Trendy</h2>
+            <div class="searchBox">
+                <form action="https://www.google.co.in/search?q">
+                    <input type="text" id="searchInput" class="searchInput searchBack" name="q" onfocus="this.value=' '" autofocus autocomplete="off">
+                    <label class="searchLabel" for="searchInput">Google Search</label>
+                </form>
+            </div>
+            <div class="innerContainer" ui-sortable ng-model="details">
+                <div class="everySingle" title="{{single.iconName}}" ng-repeat="single in details">
+                    <a href="{{single.mainUrl}}">
+                        <div class="item-{{ single.id }}" style="background: url({{single.iconUrl}});background-size: 70px 70px;background-position:center;background-repeat: no-repeat;"></div>
+                    </a>
+                    <style>
+                        .item-{{single.id}} {
+                            height: 100px;
+                            width: 100px;
+                            margin: 7px;
+                            border-radius: 100%;
+                            border: 1px solid {{single.iconBorderColor}};
+                            transition: box-shadow 0.4s, margin 0.2s;
+                        }
+                        .item-{{single.id}}:hover   {
+                            margin-top: -2px;
+                            box-shadow: 2px 2px 5px 1px {{single.iconBorderColor}};
+                        }
+                        @media all and (max-width: 500px)   {
+                            .item-{{single.id}} {
+                                height: 50px;
+                                width: 50px;
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+            <div class="quote">
+                <p class="quoteQuote">
+                    Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.
+                </p>
+            </div>
         </div>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+        </script>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="/bower_components/angular-ui-sortable/sortable.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="/bower_components/angular-messages/angular-messages.js"></script>
+        <script src="/bower_components/angular-material/angular-material.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
     </div>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-    </script>
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-resource/angular-resource.js"></script>
-    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
-    <script src="/bower_components/angular-ui-sortable/sortable.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/angular-aria/angular-aria.js"></script>
-    <script src="/bower_components/angular-messages/angular-messages.js"></script>
-    <script src="/bower_components/angular-material/angular-material.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
 </body>
 
 </html>
